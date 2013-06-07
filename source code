@@ -1,0 +1,40 @@
+#!/usr/bin/pyhton
+#Copyright 2013, James Quarshie
+
+'''This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.'''
+
+
+import random
+
+deck = range(52)
+
+#shuffles the card
+random.shuffle(deck)
+
+#pops out a card
+card = deck.pop()
+
+#value of card
+vcard = card % 13
+
+#suits of card
+scard = card % 4
+
+values = ["Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"]
+suits = ["Hearts", "Diamond", "Spades", "Clubs"]
+
+value = values[vcard]
+suit  = suits[scard]
+
+print("You chose the %s of %s" %(value, suit))
